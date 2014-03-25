@@ -21,7 +21,8 @@
 	<!-- Spells -->
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script><!-- load jquery -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.8/angular.min.js"></script><!-- load angular -->
-	<script src="js/core.js"></script>
+	<script src="/socket.io/socket.io.js"></script><!-- load socket libraries -->
+	<script src="js/controllers/mainController.js"></script><!-- custom angular controller -->
 
 </head>
 <!-- Set the angular controller and get all the gossips -->
@@ -50,9 +51,8 @@
 		<!-- Form to create new gossips -->
 		<div id="gossip-form" class="row">
 			<div class="col-sm-8 col-sm-offset-2 text-center">
-				<form>
+				<form class="form-horizontal" role="form">
 					<div class="form-group">
-
 						<!-- BIND THIS VALUE TO formData.text IN ANGULAR -->
 						<input type="text" class="form-control input-lg text-center" placeholder="I do have new gossips to share!" ng-model="formData.description" ng-required='true'>
 					</div>

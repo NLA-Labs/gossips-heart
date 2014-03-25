@@ -18,6 +18,12 @@ function mainController($scope, $http) {
 
 	$scope.getAllGossips();
 
+	$scope.stocks = [];
+  	socket.on('msg', function(data) { // Listening in Socket in Angular Controller
+		//$scope.stocks = JSON.parse(data.msg);
+		console.log('Message from socket: ' + data);
+	});
+
 	// when submitting the add form, send the text to the node API
 	$scope.createGossip = function() {
 		$http.post('/gossip', $scope.formData)
