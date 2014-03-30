@@ -58,7 +58,7 @@
 					</div>
 
 					<!-- createGossip() will create new gossips -->
-					<button type="submit" class="btn btn-primary btn-lg" ng-click="createGossip()">Add</button>
+					<button type="submit" class="btn btn-primary btn-lg" ng-click="createGossip()" ng-disabled="!formData.description">Add</button>
 				</form>
 			</div>
 		</div>
