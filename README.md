@@ -1,5 +1,6 @@
 # gossips
 ### a Sails application
+Added a dummy test just to check integration
 
 # Running instance
 
